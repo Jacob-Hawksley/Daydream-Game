@@ -31,3 +31,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_out_of_bounds_body_entered(body: Node2D) -> void:
 	position = Vector2(-200,150)
+
+
+func _on_spikes_body_entered(body: Node) -> void:
+	position = Vector2(3000,300)
