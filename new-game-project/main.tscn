@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://b2ax8gmg0tg0m"]
+[gd_scene load_steps=43 format=4 uid="uid://b2ax8gmg0tg0m"]
 
 [ext_resource type="Script" uid="uid://dqhr5sk6knxev" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cb71bjlbyb85m" path="res://main.gd" id="1_h2yge"]
@@ -24,7 +24,6 @@
 [ext_resource type="Script" uid="uid://cbia8kmnvw6s4" path="res://spikes.gd" id="19_82xsv"]
 [ext_resource type="Texture2D" uid="uid://co7hk52pqoas3" path="res://pixil-frame-0 (47).png" id="19_cegan"]
 [ext_resource type="Script" uid="uid://cyiq1c0tyqddo" path="res://stevekiller.gd" id="21_getpj"]
-[ext_resource type="AudioStream" uid="uid://ykg8krlotmod" path="res://cartoon-splat-310479.mp3" id="22_d13ii"]
 [ext_resource type="Script" uid="uid://cyf3jpni0yiuv" path="res://end_cutscene.gd" id="23_1u8w0"]
 [ext_resource type="AudioStream" uid="uid://c1ol5a75m8mju" path="res://Sacrifice.mp3" id="24_lswn8"]
 [ext_resource type="AudioStream" uid="uid://cdl81a34yitvk" path="res://you.mp3" id="25_a6jrf"]
@@ -268,18 +267,10 @@ script = ExtResource("21_getpj")
 position = Vector2(3981, 391)
 shape = SubResource("RectangleShape2D_ryguw")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Spikes/Stevekiller"]
-stream = ExtResource("22_d13ii")
-volume_db = 19.21
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Spikes/Stevekiller"]
 position = Vector2(3424, 227)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_seu75")
-
-[node name="splat" type="AudioStreamPlayer2D" parent="Spikes/Stevekiller"]
-stream = ExtResource("22_d13ii")
-volume_db = 24.0
 
 [node name="End_Cutscene" type="Area2D" parent="."]
 process_mode = 3
