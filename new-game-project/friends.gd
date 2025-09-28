@@ -7,4 +7,5 @@ func _ready() -> void:
 
 func newfriend():
 	var friend = friendtcsn.instantiate()
+	friend.scale = Vector2(0.3,0.3)
 	add_child(friend)

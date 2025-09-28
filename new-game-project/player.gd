@@ -27,3 +27,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	move_and_slide()
+
+
+func _on_out_of_bounds_body_entered(body: Node2D) -> void:
+	position = Vector2(-200,150)

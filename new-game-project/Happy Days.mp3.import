@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk8c6imyt6vju"
+path="res://.godot/imported/Happy Days.mp3-1e1b3337d0a53247389017f496b7e90f.mp3str"
+
+[deps]
+
+source_file="res://Happy Days.mp3"
+dest_files=["res://.godot/imported/Happy Days.mp3-1e1b3337d0a53247389017f496b7e90f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://qnr62l8komjf"]
+[gd_scene load_steps=8 format=3 uid="uid://qnr62l8komjf"]
 
 [ext_resource type="Script" uid="uid://p7oin0ilb0aj" path="res://friend.gd" id="1_3hdib"]
 [ext_resource type="Texture2D" uid="uid://pjiv6dwaqrer" path="res://pixil-frame-0 (32).png" id="2_3hdib"]
 [ext_resource type="Texture2D" uid="uid://mttwk6spifii" path="res://pixil-frame-0 (34).png" id="2_nvcv4"]
+[ext_resource type="AudioStream" uid="uid://cmodjyyllx2qs" path="res://Woah!_2.mp3" id="4_cafaa"]
+[ext_resource type="Script" uid="uid://cd5oxt2m2e2f0" path="res://woah.gd" id="5_8t4qa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hdib"]
 size = Vector2(96, 312)
@@ -27,16 +29,23 @@ animations = [{
 }]
 
 [node name="Friend" type="RigidBody2D"]
+scale = Vector2(0.3, 0.3)
 collision_layer = 0
 script = ExtResource("1_3hdib")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, 4)
 shape = SubResource("RectangleShape2D_3hdib")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_k2ghq")
+autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_cafaa")
+volume_db = 4.79
+max_distance = 2e+06
+script = ExtResource("5_8t4qa")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
