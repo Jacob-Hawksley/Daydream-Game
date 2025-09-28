@@ -24,3 +24,7 @@ func _process(delta: float) -> void:
 func move(pos):
 	await get_tree().create_timer(0.5).timeout
 	position = pos
+
+
+func _on_grab_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
