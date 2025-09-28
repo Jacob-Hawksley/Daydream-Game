@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://qnr62l8komjf"]
+
+[ext_resource type="Script" uid="uid://p7oin0ilb0aj" path="res://friend.gd" id="1_3hdib"]
+[ext_resource type="Texture2D" uid="uid://pjiv6dwaqrer" path="res://pixil-frame-0 (32).png" id="2_3hdib"]
+[ext_resource type="Texture2D" uid="uid://mttwk6spifii" path="res://pixil-frame-0 (34).png" id="2_nvcv4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hdib"]
+size = Vector2(96, 312)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2ghq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nvcv4")
+}],
+"loop": true,
+"name": &"ded",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3hdib")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Friend" type="RigidBody2D"]
+collision_layer = 0
+script = ExtResource("1_3hdib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 4)
+shape = SubResource("RectangleShape2D_3hdib")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_k2ghq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
